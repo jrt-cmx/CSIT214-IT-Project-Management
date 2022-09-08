@@ -1,0 +1,258 @@
+html 
+{
+	height: 100%;
+}
+
+:root 
+{
+  font-size: 16px;
+  font-family: 'Open Sans';
+  --text-primary: #b6b6b6;
+  --text-secondary: #ececec;
+  --bg-primary: #23232e;
+  --bg-secondary: #141418;
+  --transition-speed: 600ms;
+}
+
+body 
+{
+  background-image: linear-gradient(#ffffff, #a1c4fd);
+  text-align: center;
+}
+
+main 
+{
+  margin: 0;
+  padding: 0;
+  box-string: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.headerText 
+{
+    margin-top: 3%;
+}
+
+.displayText 
+{
+    background-image: linear-gradient(#a1c4fd, #c2e9fb);
+    font-size: 20px;
+    border-radius: 30px;
+    padding-top: 1%;
+    padding-bottom: 4%;
+}
+
+.box 
+{
+	position: relative;
+	height: 35px;
+	width: 200px;
+	margin: 20px auto;
+	background: rgba(56, 56, 56, 0.25);
+	border-radius: 3px;
+}
+
+.switchLabel 
+{
+	position: relative;
+	z-index: 2;
+	width: 58px;
+	line-height: 35px;
+	font-size: 20px;
+	text-align: center;
+}
+
+.switchLabel:active 
+{
+	font-weight: bold;
+}
+
+.switchInput 
+{
+	display: none;
+}
+
+.switchInput:checked + .switchLabel 
+{
+	font-weight: bold;
+	color: rgba(0, 0, 0, 0.65);
+}
+
+.switchInput:checked + .stdLabel ~ .switch 
+{
+	transform: translateX(95px);
+}
+
+.switch 
+{
+	position: absolute;
+	z-index: 1;
+	top: 2px;
+	left: 2px;
+	display: block;
+	width: 100px;
+	height: 10px;
+	border-radius: 3px;
+	background-color: rgb(89, 173, 241);
+	padding: 10px 0;
+	transition: 0.5s;
+}
+
+input[type=text] 
+{
+	height: 20px;
+}
+
+input[type=password] 
+{
+	height: 20px;
+}
+
+button
+{
+  position: relative;
+  display: inline-block;
+  padding: 15px 30px;
+  color: #2196f3;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  font-size: 24px;
+  overflow: hidden;
+  transition: 0.2s;
+  -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+  cursor: pointer;
+}
+
+button:hover
+{
+	color: #255784;
+	background: #03e9f4;
+	box-shadow: 0 0 5px #03e9f4,
+	            0 0 25px #03e9f4,
+				0 0 50px #03e9f4,
+				0 0 200px #03e9f4;
+}
+
+button span
+{
+  position: absolute;
+  display: block;
+}
+
+button span:nth-child(1)
+{
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, transparent, #03e9f4);
+  animation: animate1 1s linear infinite;
+  animation-delay: 0s;
+}
+@keyframes animate1
+{
+  0%
+  {
+    left: -100%;
+  }
+  100%
+  {
+    left: 100%;
+  }
+}
+
+button span:nth-child(3)
+{
+  bottom: 0;
+  left: -100%;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(270deg, transparent, #03e9f4);
+  animation: animate3 1s linear infinite;
+  animation-delay: 0s;
+}
+@keyframes animate3
+{
+  0%
+  {
+    left: 100%;
+  }
+  100%
+  {
+    left: -100%;
+  }
+}
+
+button span:nth-child(2)
+{
+  right: 0;
+  top: -100%;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #03e9f4);
+  animation: animate2 1s linear infinite;
+  animation-delay: 0.5s;
+}
+@keyframes animate2
+{
+  0%
+  {
+    top: -100%;
+  }
+  100%
+  {
+    top: 100%;
+  }
+}
+
+button span:nth-child(4)
+{
+  left: 0;
+  top: 100%;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(0deg, transparent, #03e9f4);
+  animation: animate4 1s linear infinite;
+  animation-delay: 0.5s;
+}
+@keyframes animate4
+{
+  0%
+  {
+    top: 100%;
+  }
+  100%
+  {
+    top: -100%;
+  }
+}
+
+.cloud
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: url(cloud.png);
+	animation: animate 60s linear infinite;
+	z-index: -1;
+	background-size: cover;
+}
+
+@keyframes animate
+{
+	0%
+	{
+		background-position: 0px;
+	}
+	100%
+	{
+		background-position: 5440px;
+	}	
+}

@@ -8,3 +8,18 @@ The team member consist of :
 * Jing Jue Ching (Programmer)
 * Neo Kai Heng (Documentation)
 * Seri Dania (Documentation)
+
+
+Users:
+1. Staff
+2. Student
+3. Super admin
+
+Functions
+1. Room Creation
+2. Room managments
+3. Price managements
+4. Discounts/promo codes
+5. Booking of room
+6. Cancel booking
+7. Manage room approval

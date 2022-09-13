@@ -15,7 +15,7 @@ Users:
 2. Student
 3. Super admin
 
-Functions
+Functions:
 1. Room Creation
 2. Room managments
 3. Price managements
